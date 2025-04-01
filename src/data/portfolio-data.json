@@ -1,6 +1,7 @@
 {
     "personal": {
       "name": "Yash Mahadevwala",
+      "phone": "+91 86900-65830",
       "title": "Software Engineer",
       "bio": "I'm a passionate web developer with expertise in Vue.js and laravel. I love creating beautiful, responsive web applications that provide exceptional user experiences.",
       "image": "profile.jpg",
@@ -8,6 +9,7 @@
       "email": "yashmahadevwala00@gmail.com",
       "github": "https://github.com/yashmahadev",
       "linkedin": "https://linkedin.com/in/yash-mahadevwala",
+      "twitter": "https://x.com/Yashmahadevwala",
       "resume": "../assets/YashMahadevwalaSoftwareEngineer.pdf"
     },
     "skills": [
