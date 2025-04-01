@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "vue-cli-service build && gh-pages -d dist"
+    "deploy": "vue-cli-service build && gh-pages -d dist",
+    "test": "echo 'No tests specified' && exit 0"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
