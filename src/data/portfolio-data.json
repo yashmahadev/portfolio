@@ -7,8 +7,8 @@
       "location": "Surat, Gujarat, India",
       "email": "yashmahadevwala00@gmail.com",
       "github": "https://github.com/yashmahadev",
-      "linkedin": "https://linkedin.com/in/yashmahadevwala",
-      "resume": "/resume.pdf"
+      "linkedin": "https://linkedin.com/in/yash-mahadevwala",
+      "resume": "../assets/YashMahadevwalaSoftwareEngineer.pdf"
     },
     "skills": [
       {
@@ -27,7 +27,7 @@
           { "name": "Laravel", "level": "advanced" },
           { "name": "Node.js", "level": "intermediate" },
           { "name": "Express", "level": "intermediate" },
-          { "name": "RESTful APIs", "level": "intermediate" }
+          { "name": "RESTful APIs", "level": "advanced" }
         ]
       },
       {
@@ -135,12 +135,12 @@
       }
     ],
     "contact": {
-      "email": "john.doe@example.com",
-      "phone": "+1 (555) 123-4567",
+      "email": "yashmahadevwala00@gmail.com",
+      "phone": "+91 86900-65830",
       "socialLinks": {
-        "github": "https://github.com/johndoe",
-        "linkedin": "https://linkedin.com/in/johndoe",
-        "twitter": "https://twitter.com/johndoe"
+        "github": "https://github.com/yashmahadev",
+        "linkedin": "https://linkedin.com/in/yash-mahadevwala",
+        "twitter": "https://x.com/Yashmahadevwala"
       }
     }
   }
