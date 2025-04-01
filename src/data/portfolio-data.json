@@ -1,0 +1,146 @@
+{
+    "personal": {
+      "name": "Yash Mahadevwala",
+      "title": "Software Engineer",
+      "bio": "I'm a passionate web developer with expertise in Vue.js and modern JavaScript. I love creating beautiful, responsive web applications that provide exceptional user experiences.",
+      "image": "../assets/logo.png",
+      "location": "San Francisco, CA",
+      "email": "john.doe@example.com",
+      "github": "https://github.com/johndoe",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "resume": "/resume.pdf"
+    },
+    "skills": [
+      {
+        "name": "Frontend Development",
+        "skills": [
+          { "name": "Vue.js", "level": "intermediate" },
+          { "name": "JavaScript", "level": "advanced" },
+          { "name": "HTML/CSS", "level": "advanced" },
+          { "name": "Tailwind CSS", "level": "intermediate" }
+        ]
+      },
+      {
+        "name": "Backend Development",
+        "skills": [
+          { "name": "Python", "level": "basic" },
+          { "name": "Node.js", "level": "intermediate" },
+          { "name": "Express", "level": "intermediate" },
+          { "name": "RESTful APIs", "level": "intermediate" }
+        ]
+      },
+      {
+        "name": "Tools & Others",
+        "skills": [
+          { "name": "Git", "level": "advanced" },
+          { "name": "Webpack", "level": "intermediate" },
+          { "name": "Figma", "level": "intermediate" },
+          { "name": "Responsive Design", "level": "advanced" }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "title": "Software Engineer",
+        "company": "Peerbits",
+        "location": "Ahmedabad, Gujarat",
+        "startDate": "Apr 2024",
+        "endDate": "Present",
+        "description": "Leading the frontend development team, implementing Vue.js applications, and improving website performance.",
+        "highlights": [
+          "Led migration from Vue 2 to Vue 3, improving performance by 30%",
+          "Implemented Tailwind CSS, reducing CSS bundle size by 40%",
+          "Automated testing with Jest, achieving 85% code coverage"
+        ]
+      },
+      {
+        "title": "Backend PHP/Laravel Developer",
+        "company": "Dynamic Dreamz",
+        "location": "Surat, Gujarat",
+        "startDate": "Jul 2021",
+        "endDate": "Mar 2024",
+        "description": "Developed responsive websites and web applications for various clients using Vue.js and JavaScript.",
+        "highlights": [
+          "Built 15+ client websites using Vue.js and custom CMS integrations",
+          "Improved site performance scores to 90+ on Google PageSpeed",
+          "Mentored junior developers on JavaScript best practices"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "E-commerce Dashboard",
+        "description": "A comprehensive dashboard for e-commerce businesses to track sales, inventory, and customer data.",
+        "image": "/project1.jpg",
+        "technologies": ["Vue.js", "Vuex", "Chart.js", "Tailwind CSS"],
+        "demoLink": "#",
+        "sourceLink": "#",
+        "featured": true
+      },
+      {
+        "title": "Weather App",
+        "description": "A weather application that displays current weather and forecasts based on location.",
+        "image": "/project2.jpg",
+        "technologies": ["Vue.js", "OpenWeather API", "Geolocation API", "CSS3"],
+        "demoLink": "https://weather-app-demo.example.com",
+        "sourceLink": "https://github.com/johndoe/weather-app",
+        "featured": true
+      },
+      {
+        "title": "Task Management System",
+        "description": "A Kanban-style task management application with drag-and-drop functionality.",
+        "image": "/project3.jpg",
+        "technologies": ["Vue.js", "Pinia", "Vue Draggable", "Firebase"],
+        "demoLink": "https://task-management.example.com",
+        "sourceLink": "https://github.com/johndoe/task-management",
+        "featured": false
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor Computer Application (BCA)",
+        "institution": "Veer Narmad South Gujarat University",
+        "location": "Surat, Gujarat",
+        "startDate": "Jul 2018",
+        "endDate": "Apr 2021",
+        "description": "Focused on web development and software engineering principles.",
+        "highlights": [
+          "YGPA: 7.0/10.0"
+        ]
+      },
+      {
+        "degree": "12th (HSC - Commerce)",
+        "institution": "Jeevan Bharti High School",
+        "location": "Surat, Gujarat",
+        "startDate": "Jan 2017",
+        "endDate": "Apr 2018",
+        "description": "focuses on the study of business and trade, preparing students for careers in finance, management, and related fields, with core subjects including Accountancy, Economics, and Business Studies.",
+        "highlights": []
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Sarah Johnson",
+        "position": "Product Manager at Tech Solutions",
+        "company": "Tech Solutions Inc.",
+        "testimonial": "John is an exceptional developer who consistently delivers high-quality code. His attention to detail and problem-solving skills have been invaluable to our team.",
+        "image": "/testimonial1.jpg"
+      },
+      {
+        "name": "Michael Chen",
+        "position": "CTO",
+        "company": "StartUp Co.",
+        "testimonial": "Working with John was a pleasure. He quickly grasps complex requirements and turns them into elegant solutions. I would hire him again in a heartbeat.",
+        "image": "/testimonial2.jpg"
+      }
+    ],
+    "contact": {
+      "email": "john.doe@example.com",
+      "phone": "+1 (555) 123-4567",
+      "socialLinks": {
+        "github": "https://github.com/johndoe",
+        "linkedin": "https://linkedin.com/in/johndoe",
+        "twitter": "https://twitter.com/johndoe"
+      }
+    }
+  }

@@ -1,0 +1,33 @@
+/* src/assets/tailwind.css */
+@import "tailwindcss";
+
+/* Custom styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Form element styles */
+input, textarea {
+  @apply p-2;
+}
+
+:root {
+--bg-color: #ffffff;
+--text-color: #333333;
+--primary-color: #3b82f6;
+/* Add other variables as needed */
+}
+
+.dark {
+--bg-color: #1f2937;
+--text-color: #f9fafb;
+--primary-color: #60a5fa;
+/* Override other variables for dark mode */
+}
+
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+transition: background-color 0.3s, color 0.3s;
+}
+  
