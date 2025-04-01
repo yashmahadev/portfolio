@@ -4,7 +4,7 @@
         <!-- Profile Image -->
         <div class="md:w-1/3 mb-8 md:mb-0">
           <img 
-            :src="personalInfo.image" 
+            :src="getImageUrl(personalInfo.image)" 
             :alt="personalInfo.name" 
             class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
           />
@@ -80,6 +80,11 @@
       return {
         personalInfo
       };
+    },
+    methods: {
+      getImageUrl(imageName) {
+        return new URL(`../assets/${imageName}`, import.meta.url).href;
+      }
     }
   };
   </script>

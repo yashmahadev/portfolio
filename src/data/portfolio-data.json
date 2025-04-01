@@ -2,12 +2,12 @@
     "personal": {
       "name": "Yash Mahadevwala",
       "title": "Software Engineer",
-      "bio": "I'm a passionate web developer with expertise in Vue.js and modern JavaScript. I love creating beautiful, responsive web applications that provide exceptional user experiences.",
-      "image": "../assets/logo.png",
-      "location": "San Francisco, CA",
-      "email": "john.doe@example.com",
-      "github": "https://github.com/johndoe",
-      "linkedin": "https://linkedin.com/in/johndoe",
+      "bio": "I'm a passionate web developer with expertise in Vue.js and laravel. I love creating beautiful, responsive web applications that provide exceptional user experiences.",
+      "image": "profile.jpg",
+      "location": "Surat, Gujarat, India",
+      "email": "yashmahadevwala00@gmail.com",
+      "github": "https://github.com/yashmahadev",
+      "linkedin": "https://linkedin.com/in/yashmahadevwala",
       "resume": "/resume.pdf"
     },
     "skills": [
@@ -23,7 +23,8 @@
       {
         "name": "Backend Development",
         "skills": [
-          { "name": "Python", "level": "basic" },
+          { "name": "PHP", "level": "advanced" },
+          { "name": "Laravel", "level": "advanced" },
           { "name": "Node.js", "level": "intermediate" },
           { "name": "Express", "level": "intermediate" },
           { "name": "RESTful APIs", "level": "intermediate" }
@@ -34,7 +35,6 @@
         "skills": [
           { "name": "Git", "level": "advanced" },
           { "name": "Webpack", "level": "intermediate" },
-          { "name": "Figma", "level": "intermediate" },
           { "name": "Responsive Design", "level": "advanced" }
         ]
       }
