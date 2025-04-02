@@ -37,7 +37,7 @@
         "skills": [
           { "name": "Git", "level": "advanced" },
           { "name": "Webpack", "level": "intermediate" },
-          { "name": "Responsive Design", "level": "advanced" }
+          { "name": "AWS", "level": "intermediate" }
         ]
       }
     ],
