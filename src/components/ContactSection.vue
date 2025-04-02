@@ -76,18 +76,18 @@
           </div>
         </div>
         <div class="mt-12 md:mt-0">
-          <form class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-200">
+          <form ref="form" class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-colors duration-200" @submit.prevent="sendEmail">
             <div class="mb-6">
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
-              <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md shadow-sm focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark transition-colors duration-200">
+              <input type="text" placeholder="Enter Name" id="name" name="name" class="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md shadow-sm focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark transition-colors duration-200">
             </div>
             <div class="mb-6">
               <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
-              <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md shadow-sm focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark transition-colors duration-200">
+              <input type="email" placeholder="Enter Email" id="email" name="email" class="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md shadow-sm focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark transition-colors duration-200">
             </div>
             <div class="mb-6">
               <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
-              <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md shadow-sm focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark transition-colors duration-200"></textarea>
+              <textarea id="message" placeholder="Enter Message" name="message" rows="4" class="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md shadow-sm focus:ring-primary-light dark:focus:ring-primary-dark focus:border-primary-light dark:focus:border-primary-dark transition-colors duration-200"></textarea>
             </div>
             <div>
               <button type="submit" class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-light dark:bg-primary-dark hover:bg-blue-700 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-colors duration-200">
@@ -104,6 +104,7 @@
 <script>
   import { ref, onMounted } from 'vue';
   import { usePortfolioData } from '@/composables/usePortfolioData';
+  import emailjs from '@emailjs/browser';
 
   export default {
     name: 'ContactSection',
@@ -118,6 +119,23 @@
       return {
         personalInfo
       };
-    }
+    },
+    methods: {
+      sendEmail() {
+        emailjs.sendForm('service_contact_mail', 'template_bo7b2se', this.$refs.form, {
+          publicKey: 'uvS9JiCyadHJfYDZJ',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            this.$refs.form.reset();
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+      },
+    },
+
   }
   </script>
