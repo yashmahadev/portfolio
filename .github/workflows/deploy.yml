@@ -1,4 +1,4 @@
-name: Portfolio Pipeline
+name: Deploy Vue App to GitHub Pages
 
 on:
   push:
@@ -9,10 +9,6 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
-      VUE_APP_BASE_URL: "https://yashmahadev.github.io/portfolio"
-      VUE_APP_REPO_PATH: "portfolio"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -21,27 +17,34 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Install Vue CLI (Globally)
-        run: npm install -g @vue/cli
+      - name: Lint
+        run: npm run lint --if-present
 
-      - name: Run Tests
-        run: npm run test # Ensure you have test scripts in package.json
+      - name: Run tests
+        run: npm run test:unit --if-present
 
       - name: Build project
-        run: npx vue-cli-service build
+        run: npm run build
+        env:
+          NODE_ENV: production
+          VUE_APP_REPO_PATH: portfolio
+          VUE_APP_BASE_URL: https://yashmahadev.github.io/portfolio
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
 
   deploy:
     if: github.ref == 'refs/heads/main'  # Deploy only on main branch
     needs: build-and-test
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
-      VUE_APP_BASE_URL: "https://yashmahadev.github.io/portfolio"
-      VUE_APP_REPO_PATH: "portfolio"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
