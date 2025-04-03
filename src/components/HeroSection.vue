@@ -4,9 +4,9 @@
         <!-- Profile Image -->
         <div class="md:w-1/3 mb-8 md:mb-0">
           <img 
-            :src="getImageUrl(personalInfo.image)" 
+            :src="`/images/${personalInfo.image}`"
             :alt="personalInfo.name" 
-            class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
+            class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg mix-blend-multiply"
           />
         </div>
         
