@@ -4,7 +4,7 @@
         <!-- Profile Image -->
         <div class="md:w-1/3 mb-8 md:mb-0">
           <img 
-            :src="`${process.env.VUE_APP_BASE_URL}images/${personalInfo.image}`" 
+            :src="require('@/assets/profile.jpg')" 
             :alt="personalInfo.name" 
             class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg mix-blend-multiply"
           />
