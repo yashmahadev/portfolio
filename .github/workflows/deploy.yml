@@ -35,12 +35,6 @@ jobs:
           VUE_APP_REPO_PATH: portfolio
           VUE_APP_BASE_URL: https://yashmahadev.github.io/portfolio
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist
-          path: dist
-
   deploy:
     if: github.ref == 'refs/heads/main'  # Deploy only on main branch
     needs: build-and-test
