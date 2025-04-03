@@ -4,7 +4,7 @@
         <!-- Profile Image -->
         <div class="md:w-1/3 mb-8 md:mb-0">
           <img 
-            :src="getImageUrl(personalInfo.image)" 
+            :src="getImageUrl(personalInfo.image, 'images')" 
             :alt="personalInfo.name" 
             class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg mix-blend-multiply"
           />
@@ -23,7 +23,7 @@
           </p>
           <div class="flex flex-wrap gap-4">
             <a 
-              :href="personalInfo.resume" 
+              :href="getImageUrl(personalInfo.resume, 'docs')" 
               class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               target="_blank"
             >
@@ -82,9 +82,9 @@
       };
     },
     methods: {
-      getImageUrl(imageName) {
+      getImageUrl(imageName, paath) {
         const baseUrl = process.env.VUE_APP_BASE_URL || '';
-        return `${baseUrl}/images/${imageName}`;
+        return `${baseUrl}/${paath}/${imageName}`;
       }
     }
   };

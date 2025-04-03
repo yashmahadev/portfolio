@@ -10,6 +10,7 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     env:
+      NODE_ENV: production
       VUE_APP_BASE_URL: "https://yashmahadev.github.io/portfolio"
       VUE_APP_REPO_PATH: "portfolio"
     steps:
@@ -35,6 +36,7 @@ jobs:
     needs: build-and-test
     runs-on: ubuntu-latest
     env:
+      NODE_ENV: production
       VUE_APP_BASE_URL: "https://yashmahadev.github.io/portfolio"
       VUE_APP_REPO_PATH: "portfolio"
     steps:
