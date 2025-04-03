@@ -32,7 +32,7 @@ jobs:
         run: npm run test # Ensure you have test scripts in package.json
 
       - name: Build project
-        run: npm run build
+        run: npx vue-cli-service build
 
   deploy:
     if: github.ref == 'refs/heads/main'  # Deploy only on main branch
@@ -58,7 +58,7 @@ jobs:
         run: npm install -g @vue/cli
 
       - name: Build project
-        run: npm run build
+        run: npx vue-cli-service build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
