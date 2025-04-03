@@ -9,6 +9,9 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      VUE_APP_BASE_URL: "https://yashmahadev.github.io/portfolio"
+      VUE_APP_REPO_PATH: "portfolio"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,6 +34,9 @@ jobs:
     if: github.ref == 'refs/heads/main'  # Deploy only on main branch
     needs: build-and-test
     runs-on: ubuntu-latest
+    env:
+      VUE_APP_BASE_URL: "https://yashmahadev.github.io/portfolio"
+      VUE_APP_REPO_PATH: "portfolio"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

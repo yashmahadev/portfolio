@@ -4,7 +4,7 @@
         <!-- Profile Image -->
         <div class="md:w-1/3 mb-8 md:mb-0">
           <img 
-            :src="require('@/assets/profile.jpg')" 
+            :src="getImageUrl(personalInfo.image)" 
             :alt="personalInfo.name" 
             class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg mix-blend-multiply"
           />
@@ -83,7 +83,8 @@
     },
     methods: {
       getImageUrl(imageName) {
-        return new URL(`../assets/${imageName}`, import.meta.url).href;
+        const baseUrl = process.env.VUE_APP_BASE_URL || '';
+        return `${baseUrl}/images/${imageName}`;
       }
     }
   };
