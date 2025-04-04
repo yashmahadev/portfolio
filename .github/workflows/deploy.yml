@@ -56,6 +56,10 @@ jobs:
 
       - name: Build project
         run: npx vue-cli-service build
+        env:
+          NODE_ENV: production
+          VUE_APP_REPO_PATH: portfolio
+          VUE_APP_BASE_URL: https://yashmahadev.github.io/portfolio
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
